@@ -20,7 +20,6 @@ public class PrintQueue {
 	 */
 	public void printJob(Object document) {
 		try {
-
 			// 获得信号量
 			semaphore.acquire();
 
@@ -29,7 +28,6 @@ public class PrintQueue {
 			System.out.printf("%s: PrintQueue: Printing a Job during %d seconds\n", Thread.currentThread().getName(),
 					duration);
 			Thread.sleep(duration);
-
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} finally {
